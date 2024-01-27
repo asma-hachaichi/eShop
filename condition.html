@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="shortcut icon" type="image/jpg" href="favicon.PNG"/>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+      <meta charset="UTF-8">
+      <link href="./css/style.css" rel="stylesheet">
+      <link href="./css/stylee.css" rel="stylesheet">
+      <title>condition</title>
+    </head>
+
+    <body>
+      <div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#">eShop</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> 
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="page_acceuil.php">Accueil</a>
+              </li>
+              <li class="nav-item active">         
+				<div class="dropdown">
+                <button class="navbar" onclick="window.location.href='shop.php'">Shop Now</button>
+                <div class="dropdown-content">
+   							<a href="enfant.php">Enfant</a> <!--shop.html place holder lin nguedou fazet el catégories -->
+    						<a href="homme.php">Homme</a>
+   							<a href="femme.php">Femme</a>
+ 			 		    </div>
+ 			 	</div>	 
+              </li>  
+              <li class="nav-item active">
+                <a class="nav-link" href="compte.php">Mon Compte</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="ajout-produit.php">Ajouter Produit</a>
+              </li> 
+            </ul>
+          </div>
+          <style>
+            .btn{
+                border: 3px solid lightblue;
+                margin-right:35px;
+                background-color: #ffdbe9;
+                color: lightblue;
+              }
+              .btn:hover {
+                border: 3px solid #ffdbe9;
+                margin-right:35px;
+                background-color: #ce5181;
+                color: #ffdbe9;
+              }
+          </style>
+          <a class="btn" id="btn" href="logout.php" role="button">Déconnexion</a>
+          <a href="panier.php"><img src="./img/shopping-basket.png" height=40px width=40px></a>
+        </nav>
+      </div>
+      <?php if (!empty($info)) { ?>
+              <div class="alert-info">
+              <?php echo "$info" ;
+                unset ($_SESSION['infopa']);
+                ?>
+               </div>
+              <?php } ?>
+        <div class="container">
+          <br/><br/>
+          <h2>Conditions d'utilisation</h2>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <strong>Article 1. Inscription sur le Site</strong>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Lors de son inscription sur eshop, l’utilisateur devra remplir un formulaire contenant son nom, son prénom, son pseudonyme, son adresse e-mail, son numéro de téléphone et sa date de naissance. Son numéro de téléphone sera confirmé par la réception d’un SMS à des fins de sécurité. L’utilisateur pourra également choisir de s’inscrire via son compte Facebook ou son compte Apple, il sera par la suite invité à compléter ses informations personnelles afin de pouvoir profiter pleinement des services de eshop.
+
+                    Après l’inscription, le Compte de l’Utilisateur est créé. Un Utilisateur peut modifier, ajouter ou demander la suppression de son Compte d’Utilisateur à tout moment.
+                    
+                    L’Utilisateur s’engage, par ailleurs, à actualiser dans les meilleurs délais les informations fournies eShop. Il est seul responsable des conséquences éventuelles de l’absence d’actualisation de ces informations.
+                    
+                    L’Utilisateur s’engage à ne communiquer son email et son mot de passe en aucun cas et supportera seul les conséquences de l’utilisation de son compte, même à son insu, par une personne utilisant son compte.
+                    
+                    L’Utilisateur s’engage à ne pas s’enregistrer sous un pseudonyme portant atteinte aux droits d’un tiers, ni à un droit de propriété intellectuelle, à une marque déposée ou à une dénomination sociale. Dans le formulaire, certaines informations sont publiques et d'autres resteront privées. Le caractère public ou privé des informations à fournir est signalé devant chaque champ à remplir. Le pseudonyme ne doit pas inclure des informations personnelles de l’utilisateur (nom, prénom, numéro de téléphone, etc...)
+                    
+                    l’Utilisateur s’engage à ne pas porter atteinte au respect de la vie privée des autres Utilisateurs et à ne pas leur envoyer de message, d’objet, de documentation notamment publicitaire, par quelque moyen que ce soit (notamment par voie postale, téléphonique ou électronique). En cas de non respect, le site se réserve le droit déclencher toutes les procédures qu’il jugera utiles.
+                    
+                    L’Utilisateur s’engage à ne pas indiquer ses coordonnées (téléphone, adresse, email…) dans ses Annonces, ni dans les commentaires des articles, ni dans le nom, le pseudo ou la description de son Dressing. eshop pourra, dans le cas échant, supprimer ces informations sans en avoir fait la demande préalable auprès de l’Utilisateur. En cas de non respect, le site se réserve le droit déclencher toutes les procédures qu’il jugera utiles, à savoir bannir provisoirement ou définitivement l’utilisateur.
+                    
+                    L’Utilisateur s’engage à ne pas employer sur le Site , des propos contraires aux bonnes mœurs, injurieux, diffamatoires ou pouvant porter atteinte à la réputation des autres Utilisateurs. En cas de non-respect de cette obligation, eshop se réserve le droit de suspendre le compte de l’Utilisateur sans notification préalable. En cas de récidive, eShop se réserve le droit de clôturer définitivement le compte de l’Utilisateur et de déclencher toutes les procédures qu’il jugera utiles.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <strong>Article 2 : Confidentialité</strong>
+                </a>
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    2.1 Dispositions générales
+
+                    Seuls les résidents en Tunisie ont le droit d’utiliser le site et l'application. eshop s’engage à recueillir et utiliser les Données Personnelles des Visiteurs ou des Utilisateurs dans le strict respect de la loi tunisienne sur la protection des données
+                    
+                    En utilisant le Site, Utilisateurs et Visiteurs acceptent que leurs Données Personnelles soient traitées de la manière et aux fins indiquées dans les présentes. Les Utilisateurs sont présumés avoir lu et compris la présente Politique de Confidentialité, après l’avoir acceptée lors de leur inscription. La Politique de Confidentialité est disponible sur le Site à tout moment, et peut également être téléchargée et imprimée à partir de ce même Site. Les Utilisateurs seront toujours informés en avance de la mise en œuvre des futurs changements et/ou compléments à la présente Politique de Confidentialité, qui seront envoyés par courriel et publiés sur le Site. Lorsque les Utilisateurs commandent des Services et/ou se connectent sur le Site après ces modifications, leur attention sera particulièrement attirée sur l’existence de ces changements. La présente Politique de Confidentialité s’applique de plein droit aux Visiteurs qui utilisent le Site.
+                    
+                    Les Utilisateurs et/ou les Visiteurs doivent noter que le Site est susceptible de contenir des liens vers d’autres sites Web de personnes, de sociétés ou d’organismes, et que eshop n’est pas responsable du contenu de ces sites ni de leurs politiques de confidentialité. Ces tiers peuvent recueillir les Données Personnelles des Consommateurs et/ou des Visiteurs lorsqu’ils consultent leurs publicités et/ou cliquent dessus. En outre, avant de soumettre des informations les concernant, les Utilisateurs et/ou les Visiteurs sont invités à examiner les règlements, la politique de confidentialité et les autres documents des sites Web en question.
+                    
+                    2.2 Recueil et stockage des données personnelles
+                    
+                   eshop recueille, stocke et utilise les Données Personnelles suivantes des Utilisateurs :
+                    - Au moment de l’inscription ou de la modification du compte: nom, prénom, numéro de téléphone, ville et adresse électronique.
+                    - Au moment de l’utilisation des Services : Article référencé , Données de localisation des Utilisateurs.
+                    
+                   eshop s’autorise à recueillir, stocker et utiliser les données de localisation des Utilisateurs en vue de simplifier leur mise en relation permettre d’identifier les Utilisateurs les plus proches et favoriser les Transactions entre Acheteur et Vendeur. L'adresse exacte de localisation ne sera jamais divulguée, et seule une information approximative sera utilisée. Ces données pourront être collectées par différentes technologies et notamment, sans que ce soit limitatif
+                    
+                   eshop recueille, stocke et utilise les Données Personnelles des Visiteurs en se basant sur des cookies, comme indiqué ci-dessous.
+                    
+                    
+                    2.3 objectifs de l’utilisation des données personnelles
+                    
+                   eshop utilise les Données Personnelles aux fins suivantes :
+                    2.3.1 Pour fournir les Services à un Utilisateur et/ou un Visiteur. Afin d’utiliser certains Services proposés sur le Site, un Utilisateur doit fournir des Données Personnelles indispensables pour pouvoir utiliser des Services spécifiques ;
+                    2.3.2 A des fins d’authentification ;
+                    2.3.3 Pour fournir les Services de manière efficace.eshop veille à ce que l’utilisation du Site et de ses Services soit efficace. eshop s’efforce en outre d’éviter les usurpations d’identité ;
+                    2.3.4 Pour assurer l’amélioration et le développement continus des Services, et pour fournir à un Utilisateur et/ou un Visiteur les offres de Service les mieux adaptées à ses besoins ;
+                    2.3.5 Pour respecter les règlements (lesquels peuvent inclure des obligations légales de conservation des données) ;
+                    2.3.6 Un Utilisateur et/ou un Visiteur peut s’opposer à tout moment et pour des raisons légitimes au traitement des données décrit ci-dessus en envoyant un courriel à l’Administrateur du Site. En fonction de la nature du traitement faisant l’objet de l’opposition, l’Utilisateur ou le Visiteur peut se voir de ce fait empêché d’utiliser tout ou partie des Services.
+                    2.3.7 Dès lors que l’utilisation des Données Personnelles requiert l’accord préalable de l’Utilisateur, il convient d’obtenir son accord.
+                    
+                    2.4 Droit d’accès aux données personnelles et modification
+                    
+                    Les Utilisateurs et les Visiteurs peuvent exercer leur droit d’accès aux Données Personnelles, de modification ou de suppression de celles-ci.
+                    
+                    Afin de mettre en œuvre les droits susmentionnés, les Utilisateurs et/ou les Visiteurs peuvent contacter eshop par courriel : contact@eshop.com.
+                    eshop peut avoir besoin de vérifier l’identité de l’Utilisateur ou du Visiteur avant de communiquer une partie de ses Données Personnelles, afin de s’assurer que eshop ne divulgue pas des Données Personnelles à la mauvaise personne, ou concernant la mauvaise personne.
+                    
+                    
+                    
+                    2.5 Protection des données personnelles
+                    
+                   eshop garantit que les Données Personnelles fournies par un Utilisateur et/ou un Visiteur sont protégées contre toute activité illégale, telle que l’utilisation abusive des Données Personnelles, la modification ou la destruction des Données Personnelles, l’usurpation d’identité, la fraude. La divulgation de l'identité d'un Utilisateur à un autre n'est dévoilé qu'en cas de procédure entre ces derniers.
+                    
+                    Les Utilisateurs et les Visiteurs s’engagent à ne pas divulguer leurs Données Personnelles, ni les Données Personnelles d’un tiers si celles-ci ont été mises à leur disposition, et doivent informer eshop immédiatement en cas de violations.
+                    
+                    2.6 Cookies
+                    
+                    Le Site utilise des cookies pour distinguer les Utilisateurs/Visiteurs des autres utilisateurs du Site afin d’aider eshop à améliorer leur visite lorsqu’ils naviguent sur le Site.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <strong>Article3:vente sur eshop</strong>
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <b>3.1 Déroulement d’une transaction:</b>
+
+                    Lorsque l’Acheteur paye un article en ligne sur le site ou passe une commande pour un paiement à la livraison, eshop notifie le Vendeur par email, par sms et sur le Site.
+                    
+                    Le Vendeur s’engage à confier le colis au livreur qui passera chez lui.
+                    
+                    Les Offres d’Achat émises par l’Acheteur sont indépendantes les unes des autres.
+                    
+                    <b>3.2 Paiement de la commande</b>
+                    Les paiements en ligne sont assurés par la plateforme de paiement GPG.
+                    GPG est un service sécurisé de gestion des transactions.
+                    
+                    L’Acheteur peut payer :
+                    - En espèces à la livraison
+                    - Par carte bancaire
+                    - Par carte e-dinar
+                    <b>3.3 Livraison de l’Article</b>
+        
+                    Le Vendeur s'engage à confier l'Article acheté au livreur qui se présentera à son domicile.
+                    
+                    Le colis doit être bien emballé. Le livreur remet une décharge et un numéro de suivi au Vendeur. Le Vendeur doit conserver ces documents pendant le mois suivant la date d’expédition. Sans décharge, le Vendeur ne peut faire valoir ses droits auprès du  eshop.
+                    
+                    Le Vendeur s’engage à n’insérer aucune publicité pour lui-même ou pour quiconque, sous quelque forme que ce soit.
+                    
+                    <b>3.4. Réception du colis</b>
+                    
+                    En cas de passage à domicile, l’Acheteur s’engage à répondre au téléphone pour confirmer le rendez-vous du passage du livreur, et à respecter ce rendez-vous. Faute de quoi, l’article sera réexpédié au Vendeur. Dans ce cas, eshop se réserve le droit de bannir l’Acheteur du site.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </body>
+    <main>
+        Content
+      </main>
+    
+      <footer class="flex-rw">
+    
+        <ul class="footer-list-top">
+          <li>
+            <h4 class="footer-list-header">About eShop</h4></li>
+          <li><a href='about us.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">GET TO KNOW US</a></li>
+          <li><a href='about us.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">nos politiques</a></li>
+        </ul>
+        <ul class="footer-list-top">
+          <li>
+            <h4 class="footer-list-header">FAQ</h4></li>
+          <li><a href='faq.html' class="generic-anchor footer-list-anchor">livraison</a></li>
+          <li><a href='faq.html' class="generic-anchor footer-list-anchor">paiements</a></li>
+          <li><a href='faq.html' class="generic-anchor footer-list-anchor">acheter en ligne</a></li>
+          
+        </ul>
+        <ul class="footer-list-top">
+          <li id='help'>
+            <h4 class="footer-list-header"> Help Me</h4></li>
+          <li><a href='contact.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">CONTACT</a></li>
+          <li id='order-tracking'><a href='condition.html' itemprop="significantLink" class="generic-anchor footer-list-anchor">conditions d'utilisation</a></li>
+        </ul>
+        <section class="footer-social-section flex-rw">
+            <span class="footer-social-overlap footer-social-connect">
+            CONNECT <span class="footer-social-small">with</span> US
+            </span>
+            <span class="footer-social-overlap footer-social-icons-wrapper">
+              <a href="https://www.pinterest.com" class="generic-anchor" target="_blank" title="Pinterest" itemprop="significantLink"><img src="./img/pinterest.png" height="40px" width="40px"></i></a>
+              <a href="https://www.facebook.com" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><img src="./img/facebook.png" height="40px" width="40px"></i></a>
+              <a href="https://twitter.com" class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink"><img src="./img/twitter.png" height="40px" width="40px"></a>
+              <a href="http://instagram.com" class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink"><img src="./img/instagram.png" height="40px" width="40px"></i></a>
+            </span>
+        </section>
+        <section class="footer-bottom-section flex-rw">
+          <div class="footer-bottom-wrapper">&copy; 2021 eShop in tunisia,tunis - All Rights Reserved -</div>
+
+        </section>
+      </footer>
+</html>
+
+          

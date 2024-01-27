@@ -1,0 +1,12 @@
+.navbar .btn{
+    border: 3px solid #ffdbe9;
+    margin-right:35px;
+    background-color: lightblue;
+    color: #ffdbe9;
+  }
+  .navbar .btn:hover {
+    border: 3px solid lightblue;
+    margin-right:35px;
+    background-color: #ffdbe9;
+    color: lightblue;
+  }

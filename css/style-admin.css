@@ -1,0 +1,47 @@
+.container{
+    padding-bottom: 50px;
+  }
+  .navbar{
+      padding-left: 25px;
+      padding-right: 25px;
+      background-color: lightblue;
+      border: none;
+      color: gray;
+  }
+  #navbar-toggler{
+    align-self: center;
+  }
+  h3{
+    color:#ec9bba
+  }
+  h1{
+    color:#ec9bba;
+    font-size: 80px;
+  }
+
+.table > tbody > tr:nth-child(2n+1) {
+     background-color: lightblue;
+  }
+  a{
+    color:mediumpurple;
+  }
+  a:hover{
+    color:black;
+  }
+  a:active, a:visited{
+    color: #ec9bba;
+  }
+  .btn{
+    background-color: white;
+    color: black;
+    border: 3px solid #ec9bba;
+  }
+  .btn:hover{
+    background-color: #ec9bba;
+    border: 3px solid lightgray;
+
+  }
+  .btn:active{
+    background-color: beige;
+    color:mediumpurple;
+  }

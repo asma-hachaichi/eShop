@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+      <link rel="shortcut icon" type="image/jpg" href="favicon.PNG"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <link href="./css/style.css" rel="stylesheet">
+        <link href="./css/stylee.css" rel=" stylesheet">
+        <title>FAQ</title>
+    </head>
+    <body>
+      <div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#">eShop</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> 
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="page_acceuil.php">Accueil</a>
+              </li>
+              <li class="nav-item active">         
+				<div class="dropdown">
+                <button class="navbar" onclick="window.location.href='shop.php'">Shop Now</button>
+                <div class="dropdown-content">
+   							<a href="enfant.php">Enfant</a> <!--shop.html place holder lin nguedou fazet el catégories -->
+    						<a href="homme.php">Homme</a>
+   							<a href="femme.php">Femme</a>
+ 			 		    </div>
+ 			 	</div>	 
+              </li>  
+              <li class="nav-item active">
+                <a class="nav-link" href="compte.php">Mon Compte</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="ajout-produit.php">Ajouter Produit</a>
+              </li> 
+            </ul>
+          </div>
+          <style>
+            .btn{
+                border: 3px solid lightblue;
+                margin-right:35px;
+                background-color: #ffdbe9;
+                color: lightblue;
+              }
+              .btn:hover {
+                border: 3px solid #ffdbe9;
+                margin-right:35px;
+                background-color: #ce5181;
+                color: #ffdbe9;
+              }
+          </style>
+          <a class="btn" id="btn" href="logout.php" role="button">Déconnexion</a>
+          <a href="panier.php"><img src="./img/shopping-basket.png" height=40px width=40px></a>
+        </nav>
+      </div>
+      <?php if (!empty($info)) { ?>
+              <div class="alert-info">
+              <?php echo "$info" ;
+                unset ($_SESSION['infopa']);
+                ?>
+               </div>
+              <?php } ?>
+      <div class="container">
+        <br/><br/>
+        <header><h2> sommes à votre disposition pour répondre à vos questions !</h2></header>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  <strong>C'est quoi eShop?</strong>
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"> eshop est un site de vente de vetements en ligne ou chaque amoureux du shopping peut creer son propre bonheur avec un simple clic</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  <strong>Comment obtenir l'application?</strong>
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Tu peux télécharger l'application eShop
+                   directement depuis le Play Store (Android) ou sur l'App Store (Apple).
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  <strong>Comment contacter le service client de eshop?</strong>
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Depuis la page Contactez-nous ou par téléphone au 00000000.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                  <strong>Comment s'inscrire?</strong>
+                </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"> Inscris-toi gratuitement en cliquant sur le bouton 'Connexion' ou 'Inscription'.
+                  Nous te proposons uniquement la création de compte via Facebook, ça prendra 3 secondes !.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                  <strong>Quels types je vais recevoir si je m'inscris a eshop?</strong>
+                </button>
+              </h2>
+              <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">En t'inscrivant sur eShop, tu acceptes de recevoir des e-mails concernant tes achats, tes articles favoris ,tes coups de coeur et les notifications du site.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                  <strong>Quels sont les frais de livraison?</strong>
+                </button>
+              </h2>
+              <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Les frais sont fixes par les agences de livraison et selon la distance.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSeven">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="true" aria-controls="flush-collapseSeven">
+                    <strong>Quels sont les paiements acceptes?</strong>
+                  </button>
+                </h2>
+                <div id="flush-collapseSeven" class="accordion-collapse collapse show" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">On accepte le paiement par carte bleue, carte e-dinar, en espèces via les bornes runpay et le paiement à la livraison.
+                    Tous les paiements sur le site sont sécurisés.
+                    Les informations transmises par l’acheteur lors du paiement transitent de façon sécurisée et cryptée directement vers le serveur bancaire .
+                    La collecte et la sauvegarde des informations de ta carte bancaire est assurée par GPG. En aucun cas, eShop ne stocke ou n’a accès à tes coordonnées bancaires.
+                    La sauvegarde de tes informations bancaires permet de passer commande de la façon la plus rapide et la plus simple..</div>
+                </div>
+              </div>
+          </div>
+        </div>
+    </body>
+    <main>
+      Content
+    </main>
+  <footer class="flex-rw">
+    
+    <ul class="footer-list-top">
+      <li>
+        <h4 class="footer-list-header">About eShop</h4></li>
+      <li><a href='about us.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">GET TO KNOW US</a></li>
+      <li><a href='about us.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">nos politiques</a></li>
+    </ul>
+    <ul class="footer-list-top">
+        <li>
+          <h4 class="footer-list-header">FAQ</h4></li>
+        <li><a href='faqlivraison.html' class="generic-anchor footer-list-anchor">livraison</a></li>
+        <li><a href='faqpayement.html' class="generic-anchor footer-list-anchor">paiements</a></li>
+        
+      </ul>
+    <ul class="footer-list-top">
+      <li id='help'>
+        <h4 class="footer-list-header"> Help Me</h4></li>
+      <li><a href='contact.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">CONTACT</a></li>
+      <li id='order-tracking'><a href='condition.html' itemprop="significantLink" class="generic-anchor footer-list-anchor">conditions d'utilisation</a></li>
+    </ul>
+    <section class="footer-social-section flex-rw">
+        <span class="footer-social-overlap footer-social-connect">
+        CONNECT <span class="footer-social-small">with</span> US
+        </span>
+        <span class="footer-social-overlap footer-social-icons-wrapper">
+          <a href="https://www.pinterest.com" class="generic-anchor" target="_blank" title="Pinterest" itemprop="significantLink"><img src="./img/pinterest.png" height="40px" width="40px"></i></a>
+          <a href="https://www.facebook.com" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><img src="./img/facebook.png" height="40px" width="40px"></i></a>
+          <a href="https://twitter.com" class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink"><img src="./img/twitter.png" height="40px" width="40px"></a>
+          <a href="http://instagram.com" class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink"><img src="./img/instagram.png" height="40px" width="40px"></i></a>
+        </span>
+    </section>
+    <section class="footer-bottom-section flex-rw">
+      <div class="footer-bottom-wrapper">&copy; 2021 eShop in tunisia,tunis - All Rights Reserved -</div>
+
+    </section>
+  </footer>
+</html>
